@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -75,8 +74,7 @@ public class UserDaoImpl implements UserDao {
 		String sql = "SELECT * FROM user WHERE (id = ? ) ";
 		PreparedStatement stmt = null;
 
-		try {
-                        this.connection = this.openConnection();
+		try {                        
 			stmt = this.connection.prepareStatement(sql);
 			stmt.setString(1, valueObject.getId());
 

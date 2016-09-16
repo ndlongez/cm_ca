@@ -71,7 +71,7 @@ public class PhoenixFrontController extends HttpServlet {
 		case "deleterp":
 			return "/ProcessController/delete";
 		case "logout":
-			return "/LoginController/logout";
+			return "/LoginController/logout";                                        
 		default:
 			return "/welcome.jsp";
 		}
